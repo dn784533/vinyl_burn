@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackListItem", "TrackListItem\TrackListItem.csproj", "{31B1397E-A8DD-43FA-970B-9DD9DDF2F8C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VinylBurnUI", "VinylBurnUI\VinylBurnUI.csproj", "{3D732A0B-F704-4274-BCB3-03725537B666}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SideDetails", "SideDetails\SideDetails.csproj", "{070DF77D-D74A-4290-A816-3FA724E13E44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenMethods", "GenMethods\GenMethods.csproj", "{A707008B-E251-47B6-A09D-D2A99A10108A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataObjects", "DataObjects\DataObjects.csproj", "{1FFF6966-EAE6-4574-A7EA-9F6A19594067}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Vinyl Burn Installer", "Setup Vinyl Burn\Setup Vinyl Burn.vdproj", "{38A5F674-F4D6-4975-BA4A-468CB9EBC165}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{627A6B56-74B9-4FBD-A622-6A3E5E278569}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		License.txt = License.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31B1397E-A8DD-43FA-970B-9DD9DDF2F8C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31B1397E-A8DD-43FA-970B-9DD9DDF2F8C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31B1397E-A8DD-43FA-970B-9DD9DDF2F8C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31B1397E-A8DD-43FA-970B-9DD9DDF2F8C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D732A0B-F704-4274-BCB3-03725537B666}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D732A0B-F704-4274-BCB3-03725537B666}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D732A0B-F704-4274-BCB3-03725537B666}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D732A0B-F704-4274-BCB3-03725537B666}.Release|Any CPU.Build.0 = Release|Any CPU
+		{070DF77D-D74A-4290-A816-3FA724E13E44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{070DF77D-D74A-4290-A816-3FA724E13E44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{070DF77D-D74A-4290-A816-3FA724E13E44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{070DF77D-D74A-4290-A816-3FA724E13E44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A707008B-E251-47B6-A09D-D2A99A10108A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A707008B-E251-47B6-A09D-D2A99A10108A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A707008B-E251-47B6-A09D-D2A99A10108A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A707008B-E251-47B6-A09D-D2A99A10108A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FFF6966-EAE6-4574-A7EA-9F6A19594067}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FFF6966-EAE6-4574-A7EA-9F6A19594067}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FFF6966-EAE6-4574-A7EA-9F6A19594067}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FFF6966-EAE6-4574-A7EA-9F6A19594067}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38A5F674-F4D6-4975-BA4A-468CB9EBC165}.Debug|Any CPU.ActiveCfg = Debug
+		{38A5F674-F4D6-4975-BA4A-468CB9EBC165}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7928C93E-8BC2-4876-9020-8ED27C148398}
+	EndGlobalSection
+EndGlobal

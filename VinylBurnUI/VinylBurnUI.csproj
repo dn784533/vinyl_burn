@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3D732A0B-F704-4274-BCB3-03725537B666}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VinylBurnUI</RootNamespace>
+    <AssemblyName>VinylBurnUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>VinylBurnUI.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>vinyl_burn_splash.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoDetect.cs" />
+    <Compile Include="DataButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SerialHandler.cs" />
+    <Compile Include="Side.cs" />
+    <Compile Include="SplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashForm.Designer.cs">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SplashForm.resx">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DiscSpeed.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10x10_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24x24_append.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24x24_arrow_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24x24_arrow_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24x24_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24x24_insert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24x24_lathe_stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24x24_play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24x24_return_lathe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24x24_start_cut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24x24_stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24x24_stop_cut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24x24_use_file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24x24_wind_backward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24x24_wind_forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24x24_zero_counter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dbn16rpm_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26x26_16_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26x26_22_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26x26_22_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26x26_33_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26x26_33_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26x26_39_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26x26_39_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26x26_45_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26x26_45_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26x26_78_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26x26_78_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\append.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lathecontrol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splash_image.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trackorder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vinyl_burn_splash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dbn16rpm_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dbn22rpm_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dbn22rpm_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dbn33rpm_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dbn33rpm_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dbn39rpm_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dbn39rpm_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dbn45rpm_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dbn45rpm_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataObjects\DataObjects.csproj">
+      <Project>{1fff6966-eae6-4574-a7ea-9f6a19594067}</Project>
+      <Name>DataObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GenMethods\GenMethods.csproj">
+      <Project>{a707008b-e251-47b6-a09d-d2a99a10108a}</Project>
+      <Name>GenMethods</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SideDetails\SideDetails.csproj">
+      <Project>{070df77d-d74a-4290-a816-3fa724e13e44}</Project>
+      <Name>SideDetails</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TrackListItem\TrackListItem.csproj">
+      <Project>{31b1397e-a8dd-43fa-970b-9dd9ddf2f8c8}</Project>
+      <Name>TrackListItem</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\24x24_test_cut.png" />
+    <Content Include="Resources\dbn08rpm_off.png" />
+    <Content Include="Resources\dbn08rpm_on.png" />
+    <Content Include="Resources\turntablecontrol.png" />
+    <Content Include="vinyl_burn_splash.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
